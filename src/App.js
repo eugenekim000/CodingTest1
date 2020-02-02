@@ -1,24 +1,27 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import autoComplete from './Components/autoComplete.js';
+
+async function getPredictions(string) {
+  await fetch('https://coding-challenge.echoandapex.com/locations?q=' + string)
+    .then(data => data.json())
+    .then(results => results.predictions.map({name,description})) => {
+      console.log(name)
+    }
+}
 
 function App() {
+  const [input, setInput] = useState('');
+  const [result, setResult] = useState('');
+
+  useEffect(() => {
+    getPredictions(input);
+  }, [input]);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='App'>
+      <input onChange={e => setInput(e.target.value)} />
     </div>
   );
 }
