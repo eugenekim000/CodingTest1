@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import '../App.css';
 
-function AutoComplete() {
+function AutoComplete1() {
   const [input, setInput] = useState('');
   const [result, setResult] = useState([]);
 
@@ -24,9 +24,9 @@ function AutoComplete() {
   console.log(result);
 
   return (
-    <div className='auto-complete-container'>
+    <div className='auto-complete-container1'>
       <input
-        className='user-input'
+        className='user-input1'
         onChange={e => setInput(e.target.value)}
         list='auto-complete'
         id='auto-complete-choice'
@@ -39,13 +39,13 @@ function AutoComplete() {
 
       {result == '' ? (
         <div>
-          <h1 className='no-results'>No Results</h1>
+          <h1 className='no-results1'>No Results</h1>
         </div>
       ) : (
-        <div className='suggestion-container'>
+        <div className='suggestion-container1'>
           {result.map(data => {
             return (
-              <div className='suggestion-description'>{data.description}</div>
+              <div className='suggestion-description1'>{data.description}</div>
             );
           })}
         </div>
@@ -54,4 +54,4 @@ function AutoComplete() {
   );
 }
 
-export default AutoComplete;
+export default AutoComplete1;

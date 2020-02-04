@@ -1,27 +1,17 @@
-import React, { useEffect, useState } from 'react';
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
-import autoComplete from './Components/autoComplete.js';
-
-async function getPredictions(string) {
-  await fetch('https://coding-challenge.echoandapex.com/locations?q=' + string)
-    .then(data => data.json())
-    .then(results => results.predictions.map({name,description})) => {
-      console.log(name)
-    }
-}
+import AutoComplete from './Components/autoComplete.js';
+import AutoComplete1 from './Components/autoComplete1';
+import AutoComplete2 from './Components/autoComplete2.js';
 
 function App() {
-  const [input, setInput] = useState('');
-  const [result, setResult] = useState('');
-
-  useEffect(() => {
-    getPredictions(input);
-  }, [input]);
-
   return (
     <div className='App'>
-      <input onChange={e => setInput(e.target.value)} />
+      <AutoComplete />
+      <br />
+      <AutoComplete1 />
+      <br />
+      <AutoComplete2 />
     </div>
   );
 }

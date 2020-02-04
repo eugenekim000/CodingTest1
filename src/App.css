@@ -1,0 +1,70 @@
+.auto-complete-container {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.auto-complete-container1 {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.auto-complete-container2 {
+  text-align: center;
+  margin-top: 30px;
+  background-color: black;
+}
+
+.user-input1 {
+  border: 2px solid blue;
+  border-radius: 15px 15px 15px 15px;
+  font-size: 18px;
+  padding: 10px;
+  height: 20px;
+  width: 300px;
+}
+
+.no-results1 {
+  color: blue;
+  font-size: medium;
+  font-weight: lighter;
+}
+
+.suggestion-container1 {
+  border: 2px solid blue;
+  border-radius: 40px 40px 40px 40px;
+}
+
+.suggestion-description1 {
+  margin: 10px;
+  text-size-adjust: 10px;
+  color: blueviolet;
+  font-weight: bold;
+}
+
+.user-input2 {
+  border: 2px solid grey;
+  border-radius: 15px 15px 15px 15px;
+  font-size: 10px;
+  padding: 10px;
+  height: 20px;
+  width: 200px;
+}
+
+.no-results2 {
+  color: white;
+  font-size: x-large;
+  font-weight: lighter;
+}
+
+.suggestion-container2 {
+  border: 2px solid blue;
+  border-radius: 40px 40px 40px 40px;
+}
+
+.suggestion-description2 {
+  margin: 10px;
+  font-family: cursive;
+  text-size-adjust: 10px;
+  color: white;
+  font-weight: bold;
+}
